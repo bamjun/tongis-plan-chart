@@ -24,7 +24,7 @@ tasks = [
 ]
 
 start_dates = pd.to_datetime([
-    "2024-10-20", "2024-11-20", "2024-12-20",
+    "2024-10-20", "2024-11-20", "2025-03-10",
     "2025-04-01", "2025-06-01", "2025-08-01", "2025-10-01"
 ])
 
@@ -34,7 +34,7 @@ end_dates = [
 ]
 
 # Create the plot with thicker lines
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(12, 4))  # 가로 세로 크기 조정
 for i, (task, start, end) in enumerate(zip(tasks, start_dates, end_dates)):
     plt.plot([start, end], [i, i], linestyle='-', color='b', linewidth=8, label='' if i > 0 else 'Development Duration')
     # start 날짜에서 10일을 뺀 위치에 텍스트 배치
@@ -48,7 +48,7 @@ plt.xlabel('Time')
 plt.grid(axis='x', linestyle='--', alpha=0.7)
 
 # 여백 조정
-plt.subplots_adjust(left=0.4)  # 왼쪽 여백을 40%로 설정
+plt.subplots_adjust(left=0.4, top=0.95, bottom=0.1)  # top과 bottom 여백도 조정
 
 # Show the plot
 plt.show()
