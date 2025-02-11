@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib import font_manager, rc
+import pandas as pd
 
 # 한글 폰트 설정
 # Windows의 경우

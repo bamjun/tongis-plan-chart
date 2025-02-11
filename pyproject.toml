@@ -7,4 +7,30 @@ requires-python = ">=3.12"
 dependencies = [
     "matplotlib>=3.10.0",
     "pandas>=2.2.3",
+    "ruff>=0.9.6",
+]
+
+[tool.ruff]
+# Python 버전 지정
+target-version = "py37"
+
+# 린트 규칙 설정
+select = [
+    "E",  # pycodestyle 에러
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+]
+
+# 특정 규칙 무시
+ignore = ["E501"]  # 줄 길이 제한 무시
+
+# 줄 길이 제한
+line-length = 88
+
+# 파일 제외
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
 ]
